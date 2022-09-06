@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kurulus Detail</title>
+</head>
+<body>
+<p> kurulus Name: {{ kurulus.KurulusAdi }} | <a href="{% url 'kurulus:kurulus_update' kurulus.KurulusId %}">Update</a> |
+    <a href="{% url 'kurulus:kurulus_delete' kurulus.KurulusId %}">Delete</a>
+</p>
+<p> kurulus Status: {{ kurulus.get_status_display }} </p>
+<p> <a href="{% url 'kurulus:kurulus_list' %}">View All kurulus</a> |
+    <a href="{% url 'kurulus:kurulus_create'%}">New kurulus</a>
+</p>
+</body>
+</html>

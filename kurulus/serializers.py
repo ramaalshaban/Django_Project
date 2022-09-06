@@ -1,0 +1,8 @@
+from django.db.models import fields
+from rest_framework import serializers
+from .models import Kurulus
+  
+class ItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Kurulus
+        fields = ('KurulusUlke', 'KurulusTuru', 'KurukusCalisanSayi')
